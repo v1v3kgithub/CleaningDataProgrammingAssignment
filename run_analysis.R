@@ -50,3 +50,7 @@ test_data$DataSet = "Test"
 
 print("Combining Test and Training Data Set")
 combined_data <- rbind(test_data,training_data)
+
+print("Retriving only measurements for mean and std")
+library("dplyr")
+data_subet <- select(combined_data,contains("mean()"),contains("std()"))
