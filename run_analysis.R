@@ -37,11 +37,16 @@ X_train.txt <- "./train/X_train.txt"
 Y_train.txt <- "./train/y_train.txt"
 subject_train.txt <- "./train/subject_train.txt"
 
+print("Reading the Training Data ")
 training_data <- create_measurement_data(X_train.txt,Y_train.txt,subject_train.txt,features,activity_labels)
 training_data$DataSet = "Training"
   
 X_test.txt <- "./test/X_test.txt"
 Y_test.txt <- "./test/y_test.txt"
 subject_test.txt <- "./test/subject_test.txt"
+print("Reading the Test Data ")
 test_data <- create_measurement_data(X_test.txt,Y_test.txt,subject_test.txt,features,activity_labels)
-training_data$DataSet = "Test"
+test_data$DataSet = "Test"
+
+print("Combining Test and Training Data Set")
+combined_data <- rbind(test_data,training_data)
