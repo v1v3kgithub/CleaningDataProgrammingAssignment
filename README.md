@@ -19,4 +19,11 @@ In tidy data:
 2. Each observation forms a row.
 3. Each type of observational unit forms a table.
 
+Similary each record in the file represnets (column names)
+
+1. SubjectId : Identification of the Subject who performed the activity
+2. ActivityLabel: The type of activity performed e.g. Walking, Laying etc.
+3. Measurement Type: Type of measurement performed (see feature_info.txt for the description of measurements)
+4. Value: The measurement value.
+
 
