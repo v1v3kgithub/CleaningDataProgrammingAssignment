@@ -1,4 +1,4 @@
-setwd("/home/vivek/Development/R/Coursera/CleaningDataProgrammingAssignment/")
+
 activity_labels.txt <- "activity_labels.txt"
 features.txt <- "features.txt"
 
