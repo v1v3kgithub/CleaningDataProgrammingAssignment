@@ -60,13 +60,16 @@ combined_data <- rbind(test_data,training_data)
 
 # --------- Filtering columns and only including columns for mean() and std()
 print("Retriving only measurements for mean and std")
-library("dplyr")
+library(dplyr)
 data_step4 <- select(combined_data,ActivityId,ActivityLabel,SubjectId,DataSet,contains("mean()"),contains("std()"))
 
 # --- Creating Tidy data 
+print("Creating wide tidy data")
 tidy_data <- data_step4 %>% group_by(ActivityLabel,SubjectId) %>% summarise_each(funs(mean),contains("mean()"),contains("std()"))
 
 # --- According to Tidy Data - Hadley Wickham -- Making the data narrow
 library(reshape2)
+print("Converting to narrow tidy data")
 narrow_tidy <- melt(tidy_data,id.vars=c("SubjectId","ActivityLabel"),value.name="Value",variable.name="MeasurementType")
+print("Saving to file...")
 write.table(narrow_tidy,file="./narrow_tidy_data.txt")
