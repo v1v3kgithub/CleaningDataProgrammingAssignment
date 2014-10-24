@@ -11,6 +11,8 @@ File Name: narrow_tidy_data.txt
 
 ##Generated file: narrow_tidy_data.txt
 The file contains mutiple records, based off *Hadley Wickham's Tidy Data paper* avaliable at (http://vita.had.co.nz/papers/tidy-data.pdf) 
+
+
 In tidy data:
 1. Each variable forms a column.
 2. Each observation forms a row.
