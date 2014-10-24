@@ -1,4 +1,5 @@
 CleaningDataProgrammingAssignment
 =================================
 
-Coursera CleaningDataProgrammingAssignment
+Code Book
+----------
