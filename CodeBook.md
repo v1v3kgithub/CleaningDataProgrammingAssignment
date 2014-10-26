@@ -43,7 +43,8 @@ This function performs the following steps
 	```
 	
   * Using the features and activity_lables read in step 1 (above) set valid measurement lables and merge with activity_lables to create either training/test data set with ActivityId, ActivityLable, Subject Id.
-* #####Using the function (`create_measurement_data`) defined above read the `training_data` and `test_data` data
+
+##### Using the function (`create_measurement_data`) defined above read the `training_data` and `test_data` data
 
 The following data as read from the `training_data`
 
@@ -126,3 +127,10 @@ std(): Standard deviation
 Finally for each of the above signals we calculate the mean of the signals as grouped by Activity Label and Subject Id
 
 e.g. tBodyAcc-mean()-X Represents the Average (by Activity Label and Subject) of the Mean Body Acceleration along the X axis
+
+```
+  SubjectId ActivityLabel   MeasurementType     Value
+1         1        LAYING tBodyAcc-mean()-X 0.2215982
+2         2        LAYING tBodyAcc-mean()-X 0.2813734
+```
+Based off the above section of the generated tidy_data the value `0.2215982` represents the Average Mean Body Acceleration along the X axis (`tBodyAcc-mean()-X`)
