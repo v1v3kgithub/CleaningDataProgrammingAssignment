@@ -1,7 +1,7 @@
 
 
 #### Steps in reading raw data 
-1. Read the static data i.e List of Features and Activity Data
+##### Read the static data i.e List of Features and Activity Data
 Here we create two variables features and activity_lables
 ```
 > head(features)
@@ -21,7 +21,7 @@ Here we create two variables features and activity_lables
 5          5           STANDING
 6          6             LAYING
 ```
-2. Define a function called create_measurement_data for reading the traiding data and creating a data.frame
+##### Define a function called create_measurement_data for reading the traiding data and creating a data.frame
 
 ```
 create_measurement_data <- function(data_set_file.txt,
@@ -43,7 +43,7 @@ This function performs the following steps
 	```
 	
   * Using the features and activity_lables read in step 1 (above) set valid measurement lables and merge with activity_lables to create either training/test data set with ActivityId, ActivityLable, Subject Id.
-3. Using the function (`create_measurement_data`) defined above read the `training_data` and `test_data` data
+* #####Using the function (`create_measurement_data`) defined above read the `training_data` and `test_data` data
 
 The following data as read from the `training_data`
 
@@ -57,10 +57,10 @@ The following data as read from the `training_data`
 > 
 
 ```
-4. Combine the `training_data` and `test_data` into a single data.frame called `combined_data`
-5. Using the function dplyr:select function only select columns (features) with represent the `mean()` and `std()`
-6. Calculate the mean of all the features select in the above step (variable `tidy_data`)
-7. Following the White papaer Tidy Data by Hadley Wickham [http://vita.had.co.nz/papers/tidy-data.pdf] we make the tidy data narrow (variable `narrow_tidy`)
+##### Combine the `training_data` and `test_data` into a single data.frame called `combined_data`
+##### Using the function dplyr:select function only select columns (features) with represent the `mean()` and `std()`
+##### Calculate the mean of all the features select in the above step (variable `tidy_data`)
+##### Following the White papaer Tidy Data by Hadley Wickham [http://vita.had.co.nz/papers/tidy-data.pdf] we make the tidy data narrow (variable `narrow_tidy`)
 
 narrow_tidy data
 
@@ -70,7 +70,7 @@ narrow_tidy data
 2         2        LAYING tBodyAcc-mean()-X 0.2813734
 3         3        LAYING tBodyAcc-mean()-X 0.2755169
   ```
-8. Save the data to file `narrow_tidy_data.txt`
+##### Save the data to file `narrow_tidy_data.txt`
 
 #### Reading Generated data back into R
 Execute the following R script to load the generated data back into R session 
