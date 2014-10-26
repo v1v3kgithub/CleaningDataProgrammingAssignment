@@ -19,6 +19,32 @@ Here we create two variables features and activity_lables
 5          5           STANDING
 6          6             LAYING
 ```
+2. Define a function called create_measurement_data for reading the traiding data and creating a data.frame
+
+```
+create_measurement_data <- function(data_set_file.txt,data_lable_file.txt,subject_file.txt,features_df,activity_labels_df)
+```
+This function performs the following steps
+	a. Read the data_set_file, data_label_file, and subject id file
+		e.g. for training data it would be the following 
+		```
+		X_train.txt <- "./train/X_train.txt"
+		Y_train.txt <- "./train/y_train.txt"
+		subject_train.txt <- "./train/subject_train.txt"
+		```
+	b. Using the features and activity_lables read in step 1 (above) set valid measurement lables and merge with activity_lables to create either training/test data set with ActivityId, ActivityLable, Subject Id.
+
+Output generated from the function for traning data
+```
+> head(training_data[1:4,1:6])
+  ActivityId ActivityLabel SubjectId tBodyAcc-mean()-X tBodyAcc-mean()-Y tBodyAcc-mean()-Z
+1          1       WALKING         6         0.2983396       -0.01625510       -0.11852915
+2          1       WALKING         6         0.3367657       -0.03933244       -0.12671856
+3          1       WALKING         6         0.2180418       -0.01220807       -0.10018623
+4          1       WALKING         6         0.2580600        0.01821096       -0.07260441
+> 
+
+```
 
 #### Reading Generated data into R
 Execute the following R script to load the generated data back into R session 
