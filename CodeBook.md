@@ -2,6 +2,7 @@ Code Book for Getting and Cleaning Data Programming Assignement
 ================================================================
 
 The code book contains of the following sections 
+
 1. Steps in reading raw data 
 2. Reading Generated data back into R
 3. Feature in the generated tidy data
