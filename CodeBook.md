@@ -133,4 +133,4 @@ e.g. tBodyAcc-mean()-X Represents the Average (by Activity Label and Subject) of
 1         1        LAYING tBodyAcc-mean()-X 0.2215982
 2         2        LAYING tBodyAcc-mean()-X 0.2813734
 ```
-Based off the above section of the generated tidy_data the value `0.2215982` represents the Average Mean Body Acceleration along the X axis (`tBodyAcc-mean()-X`)
+Based off the above section of the generated tidy_data the value `0.2215982` represents the Average (for SubjectId 1 while performing activity `LAYING`) Mean Body Acceleration along the X axis (`tBodyAcc-mean()-X`)
