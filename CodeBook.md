@@ -136,9 +136,18 @@ Finally for each of the above signals we calculate the mean of the signals as gr
 
 e.g. tBodyAcc-mean()-X Represents the Average (by Activity Label and Subject) of the Mean Body Acceleration along the X axis
 
+Each record in the generated tidy data file represents (column names)
+
+* SubjectId : Identification of the Subject who performed the activity
+* ActivityLabel: The type of activity performed e.g. Walking, Laying etc.
+* Measurement Type: Type of measurement performed (see feature_info.txt for the description of measurements)
+* Value: The measurement value.
+
+
 ```
   SubjectId ActivityLabel   MeasurementType     Value
 1         1        LAYING tBodyAcc-mean()-X 0.2215982
 2         2        LAYING tBodyAcc-mean()-X 0.2813734
 ```
 Based off the above section of the generated tidy_data the value `0.2215982` represents the Average (for SubjectId 1 while performing activity `LAYING`) Mean Body Acceleration along the X axis (`tBodyAcc-mean()-X`)
+
