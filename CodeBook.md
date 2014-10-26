@@ -55,9 +55,19 @@ The following data as read from the `training_data`
 > 
 
 ```
-4. 
+4. Combine the `training_data` and `test_data` into a single data.frame called `combined_data`
+5. Using the function dplyr:select function only select columns (features) with represent the `mean()` and `std()`
+6. Calculate the mean of all the features select in the above step (variable `tidy_data`)
+7. Following the White papaer Tidy Data by Hadley Wickham [http://vita.had.co.nz/papers/tidy-data.pdf] we make the tidy data narrow (variable `narrow_tidy`)
+  ```
+    SubjectId ActivityLabel   MeasurementType     Value
+1         1        LAYING tBodyAcc-mean()-X 0.2215982
+2         2        LAYING tBodyAcc-mean()-X 0.2813734
+3         3        LAYING tBodyAcc-mean()-X 0.2755169
+  ```
+8. Save the data to file `narrow_tidy_data.txt`
 
-#### Reading Generated data into R
+#### Reading Generated data back into R
 Execute the following R script to load the generated data back into R session 
 ```
 data <- read.table("./narrow_tidy_data.txt",header=TRUE)
